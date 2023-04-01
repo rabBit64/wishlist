@@ -1,34 +1,32 @@
 {% extends 'shoppings/base.html' %}
 {% block style %}
 <style>
-.flexMain{
-  display:flex;
-  align-items:center;
-}
-.flex2{
-  flex:2
-}
+
 </style>
 {% endblock %}
 {% block content %}
-<div id="menuHolder">
-<div role="navigation" class="sticky-top border-bottom border-top" id="mainNavigation">
-  <div class="flexMain">
-    <div class="flex2">
-      <button class="whiteLink siteLink" style="border-right:1px solid #eaeaea" onclick="menuToggle()"><i class="fas fa-bars me-2"></i> MENU</button>
-    </div>
-    <div class="flex3 text-center" id="siteBrand">
-      MY AWESOME SITE
-    </div>
+<nav class="navbar navbar-expand-lg p-3">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">PUEBCO</a>
 
-    <div class="flex2 text-end d-block d-md-none">
-      <button class="whiteLink siteLink"><i class="fas fa-search"></i></button>
-    </div>
-
-    <div class="flex2 text-end d-none d-md-block">
-      <button class="whiteLink siteLink">REGISTER</button>
-      <button class="blackLink siteLink">Login</button>
+    <div id="navbarNavDropDown">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link mx-2 active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mx-2" href="#">Pricing</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropDownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">wishlist</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropDownMenuLink">
+            <a class="dropdown-item" href="#">Blog</a>
+            <a class="dropdown-item" href="#">About us</a>
+            <a class="dropdown-item" href="#">Contact us</a>
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
-</div>
+</nav>
 {% endblock %}
